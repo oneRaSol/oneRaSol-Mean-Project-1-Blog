@@ -29,7 +29,7 @@ You can use the website to generate badges: https://shields.io/
 -----
 Credits: [zjayers](https://github.com/zjayers)
 
-Last Edited on: 30/08/2020
+Last Edited on: 30/08/2022
 
   More information here.
 </details>
