@@ -1,13 +1,9 @@
 # Frontend Bootcamp Website - Bootstrap 5
 
 ### A collapsible section with Markdown
-
+<details>
 <!-- Your title -->
 ## Hello, I'm Zach Ayers!
-
-<details>
-
-
 
 <!-- Your badges
 You can use the website to generate badges: https://shields.io/
