@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simply Blogging</title>
+
+    <style>
+    .carousel-item{
+        height: 500px;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">Simply Blogging</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="addblog.html" class="nav-link">Add Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="viewblog.html" class="nav-link">View Latest</a>
+            </li>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link">Membership</a>
+            </li>
+            <li class="nav-item">
+              <a href="terms.html" class="nav-link">Terms</a>
+            </li>
+           <li class="nav-item">
+              <li class="nav-item">
+              <a data-bs-toggle="modal"
+              data-bs-target="#loginModal" href="#" class="nav-link">Login</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </nav>
+
+        <!-- preloader -->
+    <div class="preloader">
+      <div class="loader">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- /preloader -->
+
+    <!-- Carousel -->
+    <section class="bg-secondary text-light p-5">
+      <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="carousel1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="carousel2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="carousel3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add blog -->
+    <section class="text-dark p-5">
+      <div class="container">
+<div class="container">
+      <form name="myForm" class="row g-3" class="was-validated" onsubmit="return submitData()" >
+         <legend>Submit Blogger Details</legend>
+        <div class="col-md-4">
+          <label for="validationDefault01" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="validationDefault01" name="fname" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault02" class="form-label">Last name</label>
+          <input type="text" name= "lname" class="form-control" id="validationDefault02" value="Otto" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefaultUsername" class="form-label">Username</label>
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">@gmail.com <i class="fa fa-github"></i></span>
+
+            <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+           <button class="btn btn-success dropdown-toggle"  data-bs-toggle = "dropdown" type="button">Verify</button>
+          <ul class = "dropdown-menu">
+            <li><a class= "dropdown-item">Link</a></li>
+            <li><a class= "dropdown-item">Link</a></li>
+          </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault03" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationDefault03" required>
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault04" class="form-label">State</label>
+          <select class="form-select" id="validationDefault04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationDefault05" required>
+        </div>
+
+
+        <legend>Blog Details</legend>
+
+        <div class="form-floating mb-3 mt-3 ">
+            <input type="text" class="form-control" id="title" required placeholder="Enter Title" name="title">
+            <label for="title">Blog Title</label>
+          </div>
+
+          <div class="form-floating mb-3 mt-3">
+            <textarea class="form-control" rows = "10" id="content" name="content" placeholder="Content goes here" required></textarea>
+            <label for="content">Blog Text</label>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+              <label class="form-check-label" for="invalidCheck2">
+                Agree to terms and conditions
+              </label>
+            </div>
+          </div>
+
+        <div class="col-12">
+          <button class="btn btn-success" type="submit" >Submit form</button>
+        </div>
+
+      </form>
+</div>
+      </div>
+    </section>
+
+    <!-- Boxes -->
+    <!-- <section class="p-5">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">Virtual Meetings</h3>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure, quas quidem possimus dolorum esse eligendi?
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-secondary text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-person-square"></i>
+                </div>
+                <h3 class="card-title mb-3">Yard Sale</h3>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure, quas quidem possimus dolorum esse eligendi?
+                </p>
+                <a href="#" class="btn btn-dark">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h3 class="card-title mb-3">Events</h3>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure, quas quidem possimus dolorum esse eligendi?
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Question Accordion -->
+    <!-- <section id="questions" class="p-5">
+      <div class="container">
+      <form name="myForm" class="row g-3" class="was-validated" onsubmit="return submitData()" >
+         <legend>Author Details</legend>
+        <div class="col-md-4">
+          <label for="validationDefault01" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="validationDefault01" name="fname" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault02" class="form-label">Last name</label>
+          <input type="text" name= "lname" class="form-control" id="validationDefault02" value="Otto" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefaultUsername" class="form-label">Username</label>
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">@gmail.com <i class="fa fa-github"></i></span>
+
+            <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+           <button class="btn btn-success dropdown-toggle"  data-bs-toggle = "dropdown" type="button">Verify</button>
+          <ul class = "dropdown-menu">
+            <li><a class= "dropdown-item">Link</a></li>
+            <li><a class= "dropdown-item">Link</a></li>
+          </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault03" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationDefault03" required>
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault04" class="form-label">State</label>
+          <select class="form-select" id="validationDefault04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationDefault05" required>
+        </div>
+
+
+        <legend>Blog Details</legend>
+
+        <div class="form-floating mb-3 mt-3 ">
+            <input type="text" class="form-control" id="title" required placeholder="Enter Title" name="title">
+            <label for="title">Blog Title</label>
+          </div>
+
+          <div class="form-floating mb-3 mt-3">
+            <textarea class="form-control" rows = "10" id="content" name="content" placeholder="Content goes here" required></textarea>
+            <label for="content">Blog Text</label>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+              <label class="form-check-label" for="invalidCheck2">
+                Agree to terms and conditions
+              </label>
+            </div>
+          </div>
+
+        <div class="col-12">
+          <button class="btn btn-success" type="submit" >Submit form</button>
+        </div>
+
+      </form>
+</div>
+    </section> -->
+
+    <!-- Learn Sections -->
+    <!-- <section id="learn" class="p-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="img/fundamentals.svg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Learn The Fundamentals</h2>
+            <p class="lead">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Similique deleniti possimus magnam corporis ratione facere!
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+              reiciendis eius autem eveniet mollitia, at asperiores suscipit
+              quae similique laboriosam iste minus placeat odit velit quos,
+              nulla architecto amet voluptates?
+            </p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section id="event" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>Upcoming Event</h2>
+            <p class="lead">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Similique deleniti possimus magnam corporis ratione facere!
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+              reiciendis eius autem eveniet mollitia, at asperiores suscipit
+              quae similique laboriosam iste minus placeat odit velit quos,
+              nulla architecto amet voluptates?
+            </p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Read More
+            </a>
+          </div>
+          <div class="col-md">
+            <img src="img/event.jpg" class="img-fluid img" alt="" />
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="instructors" class="p-5 bg-primary">
+      <div class="container">
+        <h2 class="text-center text-white">Neighbour Contacts</h2>
+        <p class="lead text-center text-white mb-5">
+          Our organizers all have been working for years everyday to keep our community safe.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/11.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">John Doe</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/11.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Jane Williams</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/12.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Steve Smith</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/12.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Sara Jones</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact Info</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Main Location:</span> 50 Main st Boston MA
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Contact Phone:</span> (555) 555-5555
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Contact Cell:</span> (333) 333-3333
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Contact Email:</span> (555)
+                signup@simpleblog.com
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Info Email:</span>
+                info@simpleblog.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2023 Simply Blogging</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+
+           <!-- login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModal">Log In</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="col-form-label">Password:</label>
+                <input type="password" class="form-control" id="password" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-71.060982, 42.35725],
+        zoom: 18,
+      })
+    </script>
+    <script src = "formSubmit.js"></script>
+    <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+        <!-- Main Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

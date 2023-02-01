@@ -14,4 +14,93 @@ body::before {
   .news-input {
     width: 50%;
   }
+
+.widget {
+  padding: 15px 0;
+}
+
+.widget:not(:last-child) {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.search-box {
+  position: relative;
+}
+.search-box i {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  color: #767575;
+}
+
+.post-thumb {
+  height: 400px;
+}
+.post-thumb-sm {
+  max-width: 75px;
+  max-height: 75px;
+  overflow: hidden;
+}
+
+.content * {
+  margin-bottom: 20px;
+}
+
+.comment-area-box h4 {
+  font-size: 18px;
+}
+
+/* preloader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preloader .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  background: white;
+}
+.preloader .loader .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background: #ff6f00;
+  border-radius: 50%;
+  transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+          animation: dot 2.8s infinite;
+}
+.preloader .loader .dots {
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+          animation: dots 2.8s infinite;
+}
+.preloader .loader .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background: #ff6f00;
+  border-radius: 50%;
+}
+
+
 }

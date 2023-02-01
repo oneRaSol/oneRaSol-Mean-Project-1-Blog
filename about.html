@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simply Blogging</title>
+
+      <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+
+    <style>
+    .carousel-item{
+        height: 500px;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">Simply Blogging</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="addblog.html" class="nav-link">Add Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="viewblog.html" class="nav-link">View Latest</a>
+            </li>
+            <li class="nav-item">
+              <a href="terms.html" class="nav-link">Terms</a>
+            </li>
+           <li class="nav-item">
+              <li class="nav-item">
+              <a data-bs-toggle="modal"
+              data-bs-target="#loginModal" href="#" class="nav-link">Login</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="loader">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- /preloader -->
+
+<!-- blog single -->
+<section class="p-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <br />
+					<img loading="lazy" decoding="async" src="images/author.jpg" class="img-fluid w-100 mb-4" alt="Author Image">
+					<h1 class="mb-4">Hootan Safiyari</h1>
+					<div class="content">
+						<p>Hello, I&rsquo;m Hootan Safiyari. A Content writter, Developer and Story teller. Working as a Content writter at CoolTech Agency. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.</p>
+						<blockquote>
+							<p>Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.</p>
+						</blockquote>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem.</p>
+					</div>
+
+		<div class="comment-area my-5">
+
+
+
+  </div>
+
+
+      </div>
+      <div class="col-lg-4">
+        <br />
+        <div class="widget search-box">
+          <i class="bi"></i>
+          <input type="search" id="search-post" class="form-control border-1 pl-5" name="search-post"
+            placeholder="Search">
+        </div>
+        <div class="widget">
+          <h6 class="mb-4">LATEST POST</h6>
+          <!-- <div class="media mb-4">
+            <div class="post-thumb-sm">
+              <img class="img-fluid" src="images/masonary-post/post-1.jpg" alt="post-thumb">
+            </div>
+            <div class="media-body">
+              <ul class="list-inline d-flex justify-content-between mb-2">
+                <li class="list-inline-item">Post By Jhon</li>
+                <li class="list-inline-item">June 2, 2018</li>
+              </ul>
+              <h6><a class="text-dark" href="blog-single.html">Lorem ipsum dolor sit amet, consectetur</a></h6>
+            </div>
+          </div> -->
+            <div class="d-flex widget">
+            <div class="flex-shrink-0">
+              <img width="100" height="100" src="images/masonary-post/post-3.jpg" alt="...">
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <span style="color:brown; font-weight: normal; margin-bottom: 2px;">Post By Jhon &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp    &nbsp &nbsp   &nbsp      June 2, 2018</span>
+
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+          </div>
+            <div class="d-flex widget">
+            <div class="flex-shrink-0">
+              <img width="100" height="100" src="images/masonary-post/post-3.jpg" alt="...">
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <span style="color:brown; font-weight: normal; margin-bottom: 2px;">Post By Jhon &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp    &nbsp &nbsp   &nbsp      June 2, 2018</span>
+
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+            <div class="d-flex widget">
+            <div class="flex-shrink-0">
+              <img width="100" height="100" src="images/masonary-post/post-3.jpg" alt="...">
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <span style="color:brown; font-weight: normal; margin-bottom: 2px;">Post By Jhon &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp    &nbsp &nbsp   &nbsp      June 2, 2018</span>
+
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+          </div>
+
+
+        </div>
+        <!-- <div class="widget">
+          <h6 class="mb-4">TAG</h6>
+          <ul class="list-inline tag-list">
+            <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h6 class="mb-4">CATEGORIES</h6>
+          <ul class="list-inline tag-list">
+            <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+            <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Boxes -->
+  <!-- <section class="p-5">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">Virtual Meetings</h3>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure, quas quidem possimus dolorum esse eligendi?
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-secondary text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-person-square"></i>
+                </div>
+                <h3 class="card-title mb-3">Yard Sale</h3>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure, quas quidem possimus dolorum esse eligendi?
+                </p>
+                <a href="#" class="btn btn-dark">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h3 class="card-title mb-3">Events</h3>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure, quas quidem possimus dolorum esse eligendi?
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+
+
+
+    <!-- <section id="instructors" class="p-5 bg-primary">
+      <div class="container">
+        <h2 class="text-center text-white">Neighbour Contacts</h2>
+        <p class="lead text-center text-white mb-5">
+          Our organizers all have been working for years everyday to keep our community safe.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/11.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">John Doe</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/11.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Jane Williams</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/12.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Steve Smith</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/12.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Sara Jones</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Contact & Map -->
+    <!-- <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact Info</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Main Location:</span> 50 Main st Boston MA
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Contact Phone:</span> (555) 555-5555
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Contact Cell:</span> (333) 333-3333
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Contact Email:</span> (555)
+                signup@simpleblog.com
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Info Email:</span>
+                info@simpleblog.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2023 Simply Blogging</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+
+           <!-- login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModal">Log In</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="col-form-label">Password:</label>
+                <input type="password" class="form-control" id="password" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-71.060982, 42.35725],
+        zoom: 18,
+      })
+    </script>
+    <script src = "formSubmit.js"></script>
+     <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+        <!-- Main Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
