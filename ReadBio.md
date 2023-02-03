@@ -1,4 +1,4 @@
-﻿|<p>` `John R. Bonnett</p><p>330 West 95th Street New York, New York 10025                   M(347) 736 5089 / E: rasolbey@gmail.com</p>|
+﻿|<p>🤵John R. Bonnett</p><p>330 West 95th Street New York, New York 10025                   M(347) 736 5089 / E: rasolbey@gmail.com</p>|
 | :-: |
 |||||
 |||||
