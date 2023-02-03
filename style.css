@@ -237,6 +237,7 @@ input[type="radio"][id="green"]:checked ~ .blue, input[type="radio"][id="green"]
   margin:0 auto;
 }
 
+/* image border */
 .img2 {
   border: 1px solid #555;
 }
