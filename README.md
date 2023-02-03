@@ -1,22 +1,19 @@
 # 🤵 John Bonnett
 <p align="center">
 
-
 ![](https://camo.githubusercontent.com/992babdffd8c74a1502de375fbdf7e4d54773242/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f53576f536b4e36447854737a71494b4571762f67697068792e676966)
 ### Course-end Project 1:
-- A Full Stack Website Development. I developed a blog company where people can post articles and customers can benefit from the content.
+This is a Full Stack Website Development project. Developing a Neighborhood Watch Blog where persons can post and share articles on the website, while the neighbor members can benefit from the content regarding neighborhood online meetings, yard-sales and upcoming community events.
 
 - The tools used for development are: ```.Visual Studio Code```,``` .Bootstrap 5.0```, ```.HTML/CSS```, ```.Javascript``` ```.Github``` ```.Jira```
 
-**REQUIREMENTS MET:**
-
+**REQUIRED OBJECTIVES TO BE MET:**
 
   >   1. The source codes is tracked on this GitHub repositories.
   > 2. The tracked files are ignored during the pushes to my GitHub repository in order to track the tasks.
   > 3. I also shared the link of this repository in the document submitted.
 
 ---
-
 
 **THE DEVELOPMENT STEPS:**
 
@@ -34,6 +31,8 @@
 * [Code commit / Documentation](#manuscripts)
 * [Jira project management](#manuscripts)
 
+Note: My Jira online account was integrated with my Github and used to schedule an agile development process creating the epic, stories and the tasks necessary for the features to be built to completion .
+
 <!--START_SECTION:waka-->
 
 📅 **I'm Most Productive at night**
@@ -48,7 +47,6 @@ Saturday     70 commits     ██████░░░░░░░░░░░�
 Sunday       91 commits     ███████░░░░░░░░░░░░░░░░░░   30.95%
 
 ```
-
 ---
 
 Credit: [John Bonnett]
