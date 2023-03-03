@@ -31,7 +31,7 @@ This is a Full Stack Website Development project. Developing a Neighborhood Watc
 * [Code commit / Documentation](#manuscripts)
 * [Jira project management](#manuscripts)
 
-Note: My Jira online account was integrated with my Github and used to schedule an agile development process creating the epic, stories and the tasks necessary for the features to be built to completion .
+Note: My Jira PM online account was integrated with my Github and used to schedule an agile development process creating the epic, stories and the tasks necessary for the features to be built to completion .
 
 <!--START_SECTION:waka-->
 
